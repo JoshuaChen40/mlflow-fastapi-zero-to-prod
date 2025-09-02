@@ -1,0 +1,62 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:14
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: mlflow
+      POSTGRES_PASSWORD: mlflow
+      POSTGRES_DB: mlflow
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - mlops-net
+
+  mlflow:
+    build:
+      context: docker/.
+      dockerfile: docker/Dockerfile.mlflow
+    container_name: mlflow
+    depends_on:
+      - postgres
+    ports:
+      - "5000:5000"
+    environment:
+      MLFLOW_BACKEND_STORE_URI: postgresql://mlflow:mlflow@postgres:5432/mlflow
+      MLFLOW_ARTIFACT_ROOT: /mlflow/artifacts
+    volumes:
+      - ./workspace/mlruns:/mlflow/artifacts
+    command: >
+      mlflow server
+      --backend-store-uri postgresql://mlflow:mlflow@postgres:5432/mlflow
+      --default-artifact-root /mlflow/artifacts
+      --host 0.0.0.0
+      --port 5000
+    networks:
+      - mlops-net
+
+  python-dev:
+    build:
+      context: docker/.
+      dockerfile: docker/Dockerfile.dev
+    container_name: python-dev
+    working_dir: /usr/mlflow
+    volumes:
+      - ./:/usr/mlflow
+    ports:
+      - "8888:8888"
+    command: >
+      jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token=Aa123456
+    networks:
+      - mlops-net
+
+volumes:
+  postgres_data:
+
+networks:
+  mlops-net:
+    driver: bridge
