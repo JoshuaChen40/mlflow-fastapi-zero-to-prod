@@ -1,7 +1,7 @@
 
 # 🎬 Anime Recommender System with MLflow + FastAPI + Streamlit
 
-本專案示範如何從 0 開始打造一個 **企業級動畫推薦系統**，並整合：
+本專案示範如何從 0 開始打造一個 **模型實驗室**，並整合：
 
 - **MLflow**：實驗追蹤與模型管理  
 - **PostgreSQL**：模型 metadata backend  
