@@ -46,7 +46,7 @@ services:
     container_name: python-dev
     working_dir: /usr/mlflow
     volumes:
-      - ./:/usr/mlflow
+      - ./notebooks:/usr/mlflow
     ports:
       - "8888:8888"
     command: >
