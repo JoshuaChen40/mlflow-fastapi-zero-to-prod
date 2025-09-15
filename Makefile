@@ -17,7 +17,7 @@ ps:
 logs:
 	$(DC) logs -f
 
-# 重新 build 三個 image
+# 重新 build python-dev
 build:
 	$(DC) build python-dev
 

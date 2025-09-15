@@ -2,3 +2,13 @@
 .Trash-0/
 artifacts/
 mlruns/
+
+# 不要上傳環境設定檔
+.env
+
+# 不要上傳 Kaggle 憑證檔
+kaggle.json
+.kaggle/
+
+# 不要上傳 data
+notebooks/data/
