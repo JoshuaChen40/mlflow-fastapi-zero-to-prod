@@ -133,3 +133,8 @@ pytest tests/
 2. 確認流程後移植到 `src/`
 3. 輸出統一存放在 `workspace/`
 4. 使用 MLflow 管理所有實驗
+
+
+---
+### Bug Note:
+- Artifacts 沒辦法在UI看到
