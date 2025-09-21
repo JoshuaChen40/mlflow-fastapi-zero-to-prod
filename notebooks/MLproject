@@ -1,0 +1,12 @@
+name: anime-recommender
+
+entry_points:
+  user_based:
+    parameters:
+      top_k: {type: int, default: 10}
+    command: "python src/train_user_based.py --top_k {top_k}"
+
+  item_based:
+    parameters:
+      top_k: {type: int, default: 10}
+    command: "python src/train_item_based.py --top_k {top_k}"

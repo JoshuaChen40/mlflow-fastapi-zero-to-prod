@@ -1,0 +1,2 @@
+mlflow run . -e user_based -P top_k=10 --env-manager local --experiment-name anime-recommender-project-run
+mlflow run . -e item_based -P top_k=10 --env-manager local --experiment-name anime-recommender-project-run
