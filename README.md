@@ -137,4 +137,10 @@ pytest tests/
 
 ---
 ### Bug Note:
-- Artifacts 沒辦法在UI看到
+- Artifacts 沒辦法在UI看到 (已解決)
+- 沒有裝make
+```
+sudo apt update
+sudo apt install build-essential -y
+sudo yum install make -y
+```
