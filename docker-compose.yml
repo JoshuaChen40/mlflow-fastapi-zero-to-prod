@@ -26,6 +26,7 @@ services:
     environment:
       MLFLOW_BACKEND_STORE_URI: postgresql://mlflow:mlflow@postgres:5432/mlflow
       MLFLOW_ARTIFACT_ROOT: /mlflow/artifacts
+      GIT_PYTHON_REFRESH: quiet
     volumes:
       - ./workspace/mlruns:/mlflow/artifacts
     command: >
@@ -52,6 +53,7 @@ services:
       - KAGGLE_USERNAME=${KAGGLE_USERNAME}
       - KAGGLE_KEY=${KAGGLE_KEY}
       - MLFLOW_TRACKING_URI=http://mlflow:5000
+      - GIT_PYTHON_REFRESH=quiet
     command: >
       jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token=Aa123456
     networks:

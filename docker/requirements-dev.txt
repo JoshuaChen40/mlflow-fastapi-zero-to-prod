@@ -11,3 +11,4 @@ jupyterlab==4.2.5
 kaggle==1.6.14
 requests==2.31.0
 optuna==3.6.1
+shap==0.45.1

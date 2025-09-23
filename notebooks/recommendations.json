@@ -1,0 +1,77 @@
+[
+  {
+    "input": "Comic Party Revolution OVA",
+    "recommendations": [
+      "What&#039;s Michael? 2",
+      "What&#039;s Michael?",
+      "Hyakko OVA",
+      "Yuri Seijin Naoko-san (2012)",
+      "Comic Party Revolution OVA",
+      "Geba Geba Shou Time!",
+      "Yagami-kun no Katei no Jijou",
+      "Bad Badtz-Maru no Otoko Dokyou no Omoiyari",
+      "Puyo Puyo: Madou Monogatari",
+      "Houma Hunter Lime"
+    ]
+  },
+  {
+    "input": "Love Hina Haru Special: Kimi Sakura Chiru Nakare!!",
+    "recommendations": [
+      "Chobits: Chibits",
+      "Amagami SS+ Plus Specials",
+      "Shin Koihime†Musou: Otome Tairan OVA Omake",
+      "Buddy Go!",
+      "Stitch!: Piko Kara no Chousenjou",
+      "Chuunibyou demo Koi ga Shitai! Ren Specials",
+      "Ryuugajou Nanana no Maizoukin (TV) Specials",
+      "Chibi Kero: Kerobouru no Himitsu!?",
+      "Deniroo&#039;s Circus",
+      "Di Gi Charat Christmas Special"
+    ]
+  },
+  {
+    "input": "Yakin Byoutou",
+    "recommendations": [
+      "Furifure The Animation",
+      "Haitokuzuma",
+      "Netoraserare",
+      "Kekkai",
+      "Hitozuma Ryoujoku Sankanbi",
+      "Denki Musou Hana",
+      "Hitozuma Cosplay Kissa",
+      "Yayoi",
+      "Ryoujoku Guerrilla Kari 3",
+      "Chou Do M na Hentai Mesu-tachi Otokoton Choukyou Itashimasu!"
+    ]
+  },
+  {
+    "input": "Girls und Panzer: Fushou - Akiyama Yukari no Sensha Kouza",
+    "recommendations": [
+      "Girls und Panzer: Kore ga Hontou no Anzio-sen Desu!",
+      "Hanamaru Youchien Special Preview",
+      "Toshokan Sensou: Koi no Shougai",
+      "Classroom☆Crisis Special",
+      "Ishida to Asakura Special",
+      "Tonari no Seki-kun Specials",
+      "Tactical Roar Special",
+      "Tsubasa to Hotaru (2016)",
+      "Seikai no Senki Special",
+      "Youjo Senki"
+    ]
+  },
+  {
+    "input": "Dore Dore no Uta",
+    "recommendations": [
+      "Tentoumushi no Otomurai",
+      "The Everlasting Guilty Crown",
+      "Irodorimidori: Change Our Mirai!",
+      "Kita e: Pure Session",
+      "Towa no Kizuna",
+      "Refrain",
+      "Galo Sengen",
+      "Nebula feat. Hatsune Miku",
+      "Kimi wa Sou Kimeta",
+      "World Calling"
+    ]
+  }
+]
