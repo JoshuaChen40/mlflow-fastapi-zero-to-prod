@@ -1,0 +1,4 @@
+for i in $(seq 1 3); do
+    python /usr/mlflow/src/pipeline/retrain.py
+    sleep 20
+done
