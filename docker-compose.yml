@@ -59,6 +59,20 @@ services:
     networks:
       - mlops-net
 
+  fastapi:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.fastapi
+    container_name: fastapi
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./src/api:/usr/mlflow/src/api
+    working_dir: /usr/mlflow/src/api
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    networks:
+      - mlops-net
+
 volumes:
   postgres_data:
 

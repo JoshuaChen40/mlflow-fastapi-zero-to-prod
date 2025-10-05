@@ -1,0 +1,12 @@
+FROM python:3.10-slim
+
+WORKDIR /usr/mlflow
+
+COPY docker/requirements-dev.txt .
+RUN pip install --no-cache-dir -r requirements-dev.txt
+
+# 安裝 FastAPI 與 Uvicorn
+RUN pip install fastapi==0.111.0 uvicorn==0.30.1
+
+EXPOSE 8000
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
