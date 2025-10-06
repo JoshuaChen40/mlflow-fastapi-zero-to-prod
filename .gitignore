@@ -2,6 +2,7 @@
 .Trash-0/
 artifacts/
 mlruns/
+__pycache__/
 
 # 不要上傳環境設定檔
 .env
