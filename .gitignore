@@ -13,3 +13,4 @@ kaggle.json
 
 # 不要上傳 data
 notebooks/data/
+logs/
