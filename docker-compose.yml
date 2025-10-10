@@ -74,6 +74,29 @@ services:
     networks:
       - mlops-net
 
+  streamlit:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.streamlit
+    container_name: streamlit_app
+    ports:
+      - "8501:8501"
+    environment:
+      - FASTAPI_URL=http://fastapi:8000
+    volumes:
+      - ./src/api:/src/api
+      - ./notebooks:/src/api/notebooks
+    working_dir: /src/api
+    command: >
+      streamlit run main_streamlit.py
+      --server.port=8501
+      --server.address=0.0.0.0
+      --server.runOnSave=true
+    depends_on:
+      - fastapi
+    networks:
+      - mlops-net
+
 volumes:
   postgres_data:
 

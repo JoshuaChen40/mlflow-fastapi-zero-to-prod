@@ -1,0 +1,6 @@
+FROM python:3.10-slim
+
+WORKDIR /src/api
+COPY docker/requirements-streamlit.txt .
+
+RUN pip install --no-cache-dir -r requirements-streamlit.txt
