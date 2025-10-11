@@ -86,6 +86,7 @@ services:
     volumes:
       - ./src/api:/src/api
       - ./notebooks:/src/api/notebooks
+      - ./workspace:/src/api/workspace
     working_dir: /src/api
     command: >
       streamlit run main_streamlit.py

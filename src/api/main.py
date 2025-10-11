@@ -6,6 +6,8 @@ import pandas as pd
 import os
 import csv
 from datetime import datetime
+import random
+from typing import Optional
 
 app = FastAPI(
     title="Anime Recommender API",
@@ -27,7 +29,7 @@ class ABEvent(BaseModel):
     user_id: str
     model_name: str
     model_version: int
-    recommended_title: str
+    recommended_title: Optional[str] = None
     clicked: bool
     timestamp: datetime = datetime.utcnow()
 
@@ -66,11 +68,10 @@ def recommend(request: RecommendRequest, model_name: str = Query("AnimeRecsysMod
         raise he
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Internal Error: {str(e)}")
-# === 時間分流邏輯 ===
+
+# === 改為真正隨機分流，模擬真實 A/B Test ===
 def choose_model_by_time():
-    """偶數秒 → baseline；奇數秒 → TF-IDF"""
-    sec = datetime.utcnow().second
-    return "AnimeRecsysModel" if sec % 2 == 0 else "AnimeRecsysTFIDF"
+    return random.choice(["AnimeRecsysModel", "AnimeRecsysTFIDF"])
 
 # === A/B 測試端點 ===
 @app.post("/recommend_ab")

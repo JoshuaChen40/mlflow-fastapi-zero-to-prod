@@ -24,4 +24,5 @@ build:
 # 初始化：重新 build + 啟動
 init:
 	$(DC) build --no-cache python-dev
+	$(DC) build --no-cache streamlit
 	$(DC) up -d
